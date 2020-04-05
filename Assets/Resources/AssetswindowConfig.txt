@@ -1,0 +1,10 @@
+{"windowId":1,"donotDestroy":false,"needTranslation":false}
+{"windowId":2,"donotDestroy":true,"needTranslation":false}
+{"windowId":3,"donotDestroy":false,"needTranslation":false}
+{"windowId":4,"donotDestroy":false,"needTranslation":false}
+{"windowId":5,"donotDestroy":false,"needTranslation":false}
+{"windowId":6,"donotDestroy":true,"needTranslation":false}
+{"windowId":7,"donotDestroy":true,"needTranslation":true}
+{"windowId":8,"donotDestroy":false,"needTranslation":false}
+{"windowId":9,"donotDestroy":true,"needTranslation":false}
+{"windowId":10,"donotDestroy":true,"needTranslation":false}
