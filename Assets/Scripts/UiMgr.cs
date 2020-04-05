@@ -94,25 +94,6 @@ public class UiMgr
     {
         ClosePop(WindowId.Translation);
     }
-    /// <summary>
-    /// 把不需要到回收掉
-    /// </summary>
-    public void GC()
-    {
-        List<WindowId> willRemoveList = new List<WindowId>();
-        foreach (var kv in dicWindows)
-        {
-            if (!dicWindowConfig.ContainsKey(kv.Key) && curWindowId != kv.Key)
-            {
-                willRemoveList.Add(kv.Key);
-            }
-        }
-
-        foreach (var windowId in willRemoveList)
-        {
-            DestroyWindow(windowId);
-        }
-    }
 
     /// <summary>
     /// 初始化
@@ -131,14 +112,6 @@ public class UiMgr
         {
             dicWindowConfig[item.windowId] = item;
         }
-    }
-
-    /// <summary>
-    /// 清空逻辑层历史记录
-    /// </summary>
-    public void ClearRecord()
-    {
-        stackOpen.Clear();
     }
 
     /// <summary>
@@ -245,5 +218,33 @@ public class UiMgr
     public void CloseLoading()
     {
         ClosePop(WindowId.Loading);
+    }
+
+    /// <summary>
+    /// 清空逻辑层历史记录
+    /// </summary>
+    public void ClearRecord()
+    {
+        stackOpen.Clear();
+    }
+
+    /// <summary>
+    /// 把不需要到回收掉
+    /// </summary>
+    public void GC()
+    {
+        List<WindowId> willRemoveList = new List<WindowId>();
+        foreach (var kv in dicWindows)
+        {
+            if (!dicWindowConfig.ContainsKey(kv.Key) && curWindowId != kv.Key)
+            {
+                willRemoveList.Add(kv.Key);
+            }
+        }
+
+        foreach (var windowId in willRemoveList)
+        {
+            DestroyWindow(windowId);
+        }
     }
 }
